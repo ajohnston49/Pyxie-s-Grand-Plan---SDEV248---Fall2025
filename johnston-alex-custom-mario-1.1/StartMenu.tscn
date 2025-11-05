@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcpjn1w6wv7xs"]
+
+[ext_resource type="Script" uid="uid://kia3p68evmlp" path="res://StartMenu.gd" id="1_d3352"]
+[ext_resource type="Texture2D" uid="uid://bg22rgy6biecb" path="res://menu.png" id="2_ufv5y"]
+
+[sub_resource type="Theme" id="Theme_d3352"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_d3352")
+
+[node name="IntroText" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.008
+anchor_right = 1.003
+anchor_bottom = 0.99700004
+offset_left = -6.912
+offset_top = -5.184
+offset_right = -0.4560547
+offset_bottom = -0.056030273
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.48600003
+anchor_top = 0.17
+anchor_right = 0.48600003
+anchor_bottom = 0.17
+offset_left = -77.87201
+offset_top = 349.84
+offset_right = 125.12799
+offset_bottom = 426.84
+theme = SubResource("Theme_d3352")
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_ufv5y")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsf4iu60aaetj"]
+
+[ext_resource type="Script" uid="uid://wnf3143cm7hb" path="res://WinMenu.gd" id="1_xjwx6"]
+[ext_resource type="Texture2D" uid="uid://c7myi8015p23d" path="res://win.png" id="2_1n4s7"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_xjwx6")
+
+[node name="IntroText" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.008
+anchor_right = 1.003
+anchor_bottom = 0.99700004
+offset_left = -6.912
+offset_top = -5.184
+offset_right = -0.4560547
+offset_bottom = -0.056030273
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.48600003
+anchor_top = 0.17
+anchor_right = 0.48600003
+anchor_bottom = 0.17
+offset_left = 118.12799
+offset_top = 354.84
+offset_right = 339.128
+offset_bottom = 433.84
+theme_override_colors/font_color = Color(0.82737136, 0.38027787, 0.22822654, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 26
+text = "Play Again"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_1n4s7")

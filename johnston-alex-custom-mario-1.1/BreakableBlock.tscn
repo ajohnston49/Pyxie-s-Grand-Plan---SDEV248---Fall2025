@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqt8ksf7xdyi1"]
+
+[ext_resource type="Texture2D" uid="uid://w7vucgf7g8tt" path="res://Sprite-0001.png" id="1_qiokr"]
+[ext_resource type="Script" uid="uid://do3h3kh3xbaag" path="res://BreakableBlock.gd" id="1_ve14g"]
+[ext_resource type="AudioStream" uid="uid://bhowuianhu8wd" path="res://break.mp3" id="3_glm4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glm4t"]
+size = Vector2(30, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve14g"]
+size = Vector2(32, 32)
+
+[node name="BreakableBox" type="Node2D"]
+
+[node name="BreakableBlock" type="Area2D" parent="."]
+script = ExtResource("1_ve14g")
+
+[node name="Sprite" type="Sprite2D" parent="BreakableBlock"]
+texture = ExtResource("1_qiokr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableBlock"]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_glm4t")
+debug_color = Color(0.82875365, 0.33517638, 0.5480164, 0.41960785)
+
+[node name="BreakSound2D" type="AudioStreamPlayer2D" parent="BreakableBlock"]
+stream = ExtResource("3_glm4t")
+max_polyphony = 4
+
+[node name="Block" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Block"]
+shape = SubResource("RectangleShape2D_ve14g")

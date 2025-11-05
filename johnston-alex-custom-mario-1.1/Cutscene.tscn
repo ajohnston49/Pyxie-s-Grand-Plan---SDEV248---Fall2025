@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://t3c8f2ukyvtx"]
+
+[ext_resource type="Script" uid="uid://b1i0a7udhfv2p" path="res://Cutscene.gd" id="1_7bhn1"]
+[ext_resource type="Texture2D" uid="uid://d1y2fs1xhqji2" path="res://start.png" id="2_dl562"]
+[ext_resource type="Texture2D" uid="uid://86p337t8uqhx" path="res://start2.png" id="3_af1qv"]
+
+[node name="Cutscene" type="CanvasLayer"]
+script = ExtResource("1_7bhn1")
+
+[node name="start" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_dl562")
+
+[node name="start2" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("3_af1qv")
